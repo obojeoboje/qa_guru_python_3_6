@@ -24,7 +24,7 @@ def test_contains_csv_in_archive():
                 text_in_csv = '; '.join(r)
                 list_csv.append(text_in_csv)
             assert list_csv[1] == 'booker12;9012;Rachel;Booker', f'Текст в в файле .csv не совпадает\n'
-            os.remove(cf)
+    os.remove(cf)
 
 
 def test_contains_pdf_in_archive():
@@ -36,7 +36,7 @@ def test_contains_pdf_in_archive():
         page = reader.pages[0]
         text = page.extract_text()
         assert 'Здесь будет' in text, f'Текст: {"Здесь будет"} не содержится в {text}'
-        os.remove(cf)
+    os.remove(cf)
 
 
 def test_contains_xlsx_in_archive():
